@@ -2,11 +2,11 @@
 
 El objetivo de este repositorio es mostrar una manera simplificada y entendible para utilizar las FPGAs disponibles en el laboratorio de la Universidad Nacional de Colombia. En este repositorio por el momento se van a revisar las FPGAs que he usado en mis proyectos debido a que son las más familiares, en dado caso se pueden agregar otras más a futuro.
 
-Si ven algun error o necesitan alguna información adicional pueden hacer un pull request o abrir un issue. En dado caso que quieran comunicarse mi información es:
+Si ven algún error o necesitan alguna información adicional pueden hacer un pull request o abrir un issue. En dado caso que quieran comunicarse, mi información es:
 
 - Correo: [crodriguezle@unal.edu.co](mailto:crodriguezle@unal.edu.co)
 
-Listado de las FPGA's que se encuentran en la guia:
+Listado de las FPGA's que se encuentran en la guía:
 
 > - [*Digilent Zybo z7*](FPGA'S/Zybo%20Z7/Zyboz7.md) (Propietario: AMD)
 > - [*BlackIce MyStorm*](FPGA'S/BlackIce/BlackIce.md) (Software Libre)
@@ -20,37 +20,37 @@ Antes de empezar a utilizar cualquier FPGA es importante tener en cuenta las her
 
 ### 1. Sistema Operativo
 
-La primero es conocer donde se quiere trabajar. Existen muchos sistemas operativos pero los mas usados son Windows, Linux y MacOS. En mi experiencia solo he trabadajo con Linux y Windows, asi que con esos va a partir la guia. Si usan MacOs pueden intentar instalar linux pero se vana tirar el pc.
+Lo primero es conocer dónde se quiere trabajar. Existen muchos sistemas operativos pero los más usados son Windows, Linux y MacOS. En mi experiencia solo he trabajado con Linux y Windows, así que con esos va a partir la guía. Si usan MacOS pueden intentar instalar Linux pero se van a tirar el PC.
 
-Aqui les dego una guia para instalar tanto linux o Windows en dado caso que hayan desisntalado windos (me paso).
+Aquí les dejo una guía para instalar tanto Linux o Windows en dado caso que hayan desinstalado Windows (me pasó).
 
-> [*Instalacion sistema operativo*](OS/os.md)
+> [*Instalación sistema operativo*](OS/os.md)
 
 ### 2. Entorno de Desarrollo (IDE)
 
-Para progamar las FPGS es como desarollar codigo, por lo cual es recomendable tener una aplicacion capaz de editar, compilar y ejectuar  el codigo, aparte de usar la terminal. En mi recoemndacion el mas util es **Visual Studio Code** o en abreviacion **VS Code**, un editor gratuito y bastante comodo para usar y personalizar. Al inicio puede ser un poco abrumador pero con el tiempo se vuelve bastante util.
+Para programar las FPGAs es como desarrollar código, por lo cual es recomendable tener una aplicación capaz de editar, compilar y ejecutar el código, aparte de usar la terminal. En mi recomendación el más útil es **Visual Studio Code** o en abreviación **VS Code**, un editor gratuito y bastante cómodo para usar y personalizar. Al inicio puede ser un poco abrumador pero con el tiempo se vuelve bastante útil.
 
 Tener en cuenta el sistema operativo que se usa e instalarlo:
 
-- Linux (*Cuidado con la distribucion o descargar el .tar equivalente al zip en windows*)
+- Linux (*Cuidado con la distribución o descargar el .tar equivalente al zip en Windows*)
 
-> [*Instalacion VS Code Linux*](https://code.visualstudio.com/docs/setup/linux)
+> [*Instalación VS Code Linux*](https://code.visualstudio.com/docs/setup/linux)
 
 - Windows
 
-> [*Instalacion VS Code Windows*](https://code.visualstudio.com/docs/setup/windows)
+> [*Instalación VS Code Windows*](https://code.visualstudio.com/docs/setup/windows)
 
-Pagina oficial para descargar Visual Studio Code: <https://code.visualstudio.com/download>
+Página oficial para descargar Visual Studio Code: <https://code.visualstudio.com/download>
 
-Hay otros entornos de desarollo, si ya usaban otro no se preocupen pueden usarlo siempre y cuando sepan como y les sea comodo.
+Hay otros entornos de desarrollo, si ya usaban otro no se preocupen pueden usarlo siempre y cuando sepan cómo y les sea cómodo.
 
-### 3. Lenguaje de Programacion (HDL)
+### 3. Lenguaje de Programación (HDL)
 
-Para progarmar una FPGA se necesita de un leguaje descriptivo de hardware conocido como HDL (Hardware Description Language), los dos mas usados son **Verilog** y **VHDL**, ambos muy similares en su sintaxis pero si tienen sus diferencias. El que se maneja en esta guia es Verilog, ya que es con el que estoy mas familiarizado.
+Para programar una FPGA se necesita de un lenguaje descriptivo de hardware conocido como HDL (Hardware Description Language), los dos más usados son **Verilog** y **VHDL**, ambos muy similares en su sintaxis pero sí tienen sus diferencias. El que se maneja en esta guía es Verilog, ya que es con el que estoy más familiarizado.
 
-Ahora teniendo en cuenta que vamos a usar Verilog, bnecesitamos de un compilador que entienda las isntrucciones que hace este lenguaje y las pase a un formato que la maquina en este caso FPGA pueda operar. Tambien existen varios pero vamos a usar **Icarus Verilog** por misams razone anteriores.
+Ahora teniendo en cuenta que vamos a usar Verilog, necesitamos de un compilador que entienda las instrucciones que hace este lenguaje y las pase a un formato que la máquina, en este caso FPGA, pueda operar. También existen varios pero vamos a usar **Icarus Verilog** por las mismas razones anteriores.
 
-Por comodidad vamosa  instalar todo desde el terminal, asi evitamos depender de las versiones y dejar en la instalaciona automatica de los archivos.
+Por comodidad vamos a instalar todo desde la terminal, así evitamos depender de las versiones y dejar en la instalación automática de los archivos.
 
 #### Linux (Icarus Verilog)
 
@@ -76,9 +76,9 @@ Windows tiene un sistema de manejo de paquetes bastante interesante llamado **Wi
 winget install Icarus.Verilog
 ```
 
-#### Verificar la Instalación  Icarus (*Indempendiente de windows o linux*)
+#### Verificar la Instalación  Icarus (*Independiente de Windows o Linux*)
 
-Para revisar que se haya instalado correctamente, se puede ejecutar el siguiente comando en la terminal de linux o en cmd de windows:
+Para revisar que se haya instalado correctamente, se puede ejecutar el siguiente comando en la terminal de Linux o en cmd de Windows:
 
 ```bash
 iverilog -v
@@ -86,9 +86,9 @@ iverilog -v
 
 Esto muestra la versión de Icarus Verilog instalada como: `Icarus Verilog version XX.X` (o similar). En dado caso que no funcione, está el repositorio donde se puede descargar manualmente: <https://sourceforge.net/projects/iverilog/>.
 
-### Entorno de Simulacion (GTKWave)
+### Entorno de Simulación (GTKWave)
 
-Al utilizar un HDL como verilog, es importante tener una herramienta que permita ver como el codigo se comporta. GTKWave es una herramienta para visualizar esto, mediante pulsos de tiempo y señales. Con esto se comprende si el codigo funcia de la manera esperada. Esto se hace con el objetivo de al implemtera en una FPGA, no haya errores que puedan causar que el dispositivo se dane (generalmente no pasa pero por si acaso).
+Al utilizar un HDL como Verilog, es importante tener una herramienta que permita ver cómo el código se comporta. GTKWave es una herramienta para visualizar esto, mediante pulsos de tiempo y señales. Con esto se comprende si el código funciona de la manera esperada. Esto se hace con el objetivo de al implementarlo en una FPGA, no haya errores que puedan causar que el dispositivo se dañe (generalmente no pasa pero por si acaso).
 
 #### Linux (GTKWave)
 
@@ -114,23 +114,23 @@ Abriendo la terminal con los comandos `Win + R` y escribiendo `cmd`, luego se ej
 winget install gtkwave
 ```
 
-#### Verificar la Instalación GTKWave (*Indempendiente de windows o linux*)
+#### Verificar la Instalación GTKWave (*Independiente de Windows o Linux*)
 
-Tambien podemos verirficar si esta instalado usando el comando para ver la version:
+También podemos verificar si está instalado usando el comando para ver la versión:
 
 ```bash
 gtkwave --version
 ```
 
-Aparece algo como `GTKWave Analyzer vX.X.XXXX (w)1999-20XX BSI`, endado caso que no este, descargarlo directamente de la pagina: <https://gtkwave.sourceforge.net/>.
+Aparece algo como `GTKWave Analyzer vX.X.XXXX (w)1999-20XX BSI`, en dado caso que no esté, descargarlo directamente de la página: <https://gtkwave.sourceforge.net/>.
 
-*las XXX son numeros que dependen de la version isntalada, no tienen que tener especificamente XXX, es solo un ejemplo.*
+*las XXX son números que dependen de la versión instalada, no tienen que tener específicamente XXX, es solo un ejemplo.*
 
-#### Seleccion de Hardware (FPGA)
+### Selección de Hardware (FPGA)
 
-Con esto ya estaria todas las herramientas basicas de trabajo, aun asi esto no significa que deban de intalar mas cosas para manipular las fpgas.
+Con esto ya estarían todas las herramientas básicas de trabajo, aún así esto no significa que deban de instalar más cosas para manipular las FPGAs.
 
-Dependeindo del dispositivo, este va a pedir ciertas erramientas especificas no solo para la deteccion de este si no del dispositivo en si. Aparte como cada uno de las FPGA'S tiene una empresa propietara estas se encargan de desarollar un sistema capaz de compilar lo que deseen. Revinz que tipo de dispositivo estan usando y seleccionel la guia correspondiente.
+Dependiendo del dispositivo, este va a pedir ciertas herramientas específicas no solo para la detección de este, sino del trabajo del dispositivo en sí. Aparte como cada uno de las FPGA'S tiene una empresa propietaria, estas se encargan de desarrollar un sistema capaz de compilar lo que deseen. Revisen qué tipo de dispositivo están usando y seleccionen la guía correspondiente.
 
 > - [*Digilent Zybo z7*](FPGA'S/Zybo%20Z7/Zyboz7.md) (Propietario: AMD)
 > - [*BlackIce MyStorm*](FPGA'S/BlackIce/BlackIce.md) (Software Libre)

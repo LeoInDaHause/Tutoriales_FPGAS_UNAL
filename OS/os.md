@@ -5,37 +5,37 @@
 - [Instalación en Linux](#instalación-en-linux) (*Tener en cuenta la distribución a usar*)
 - [Instalación en Windows](#instalación-en-windows)
 
-Recuerdar que la mayoria de las instalaciones necesitan una **memoria USB** generalmente se pide de 8 GB o mas pero depende mucho del tamano de las distribucion.
+Recordar que la mayoría de las instalaciones necesitan una **memoria USB** generalmente se pide de 8 GB o más, pero depende mucho del tamaño de la distribución.
 
 ## Instalación en Linux
 
 Como mencioné antes, Linux destaca por ser mucho más rápido a la hora de ejecutar programas pero es un poco más complicado de usar. Principalmente las instalaciones para las distribuciones que yo he usado [(Linux Mint, Ubuntu, Arch Linux)](#referencias-de-instalaciones-de-linux).
 
-> En caso de querer usar Linux y no tenerlo. Mi recomendación es usar **Linux Mint** siendo el más familiar a Windows y uno de los mas comodos.
+> En caso de querer usar Linux y no tenerlo. Mi recomendación es usar **Linux Mint** siendo el más familiar a Windows y uno de los más cómodos.
 
 *Pd: Hay varias formas de instalar Linux pero la más recomendada y usada para estos proyectos es tener los dos sistemas operativos, a esto se le conoce como **dual boot**, es la mejor forma para no tener que eliminar la partición de Windows. Otra forma es hacerlo en un disco aparte.*
 
 ### Referencias de instalaciones de Linux
 
-Recuerden mirar como quieren la instalacion, en un **disco aparte**, como **dual boot** o en un **disco nuevo pricipal**.
+Recuerden mirar cómo quieren la instalación, en un **disco aparte**, como **dual boot** o en un **disco nuevo principal**.
 
 #### **Linux Mint** (*Recomendado para todos*)
 
-Esta es la guia oficial de la pagina de instalacion <https://linuxmint-installation-guide.readthedocs.io/en/latest/>, se que no es muy agradable leer docuemntacion pero a veces toca, igual aqui le dejo unos videos para que sea mas amigable la instalacion:
+Esta es la guía oficial de la página de instalación <https://linuxmint-installation-guide.readthedocs.io/en/latest/>, sé que no es muy agradable leer documentación pero a veces toca, igual aquí les dejo unos videos para que sea más amigable la instalación:
   
 - [Instalación en Inglés](https://www.youtube.com/watch?v=Nn7CPlUpflk)
 - [Instalación en Español](https://www.youtube.com/watch?v=ek11Jn48x8A)
 
-#### **Instalación Ubuntu** (*Menos intuitivo pero bastante estable si tienen problemas con LinuxMint*)
+#### **Instalación Ubuntu** (*Menos intuitivo pero bastante estable si tienen problemas con Linux Mint*)
 
-Pagina oficial de la guia de instalacion <https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview>, tambien hay vidos de guia:
+Página oficial de la guía de instalación <https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview>, también hay videos de guía:
 
 - [Instalación en Inglés](https://www.youtube.com/watch?v=UTqDuWHbZkw)
 - [Instalación en Español](https://www.youtube.com/watch?v=2AmlgqbTurI)
 
 #### **Arch Linux** (*No lo hagan si valoran su tiempo, da muchos problemas y es muy complicado, aún así es mi favorito*)
 
-Aca si le toca ir full con la wiki, hasta los videos que hay son medio incompeltos si no siguen las guias de la wiki. Pagina oficial: <https://wiki.archlinux.org/title/Installation_guide>, a su vez los videos:
+Acá sí les toca ir full con la wiki, hasta los videos que hay son medio incompletos si no siguen las guías de la wiki. Página oficial: <https://wiki.archlinux.org/title/Installation_guide>, a su vez los videos:
 
 - [Instalación en Inglés](https://www.youtube.com/watch?v=9DO0MI2VtsE)
 - [Instalación en Español](https://www.youtube.com/watch?v=ltbhkjipafs)
