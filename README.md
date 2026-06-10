@@ -9,8 +9,9 @@ Si ven algún error o necesitan alguna información adicional pueden hacer un pu
 Listado de las FPGA's que se encuentran en la guía:
 
 > - [*Digilent Zybo z7*](FPGA'S/Zybo%20Z7/Zyboz7.md) (Propietario: AMD)
+> - [*Altera Cyclone*](FPGA'S/CycloneIV.md/CycloneIV.md) (Propietario: Intel, en progreso)
 > - [*BlackIce MyStorm*](FPGA'S/BlackIce/BlackIce.md) (Software Libre)
-> - [*Altera Cyclone*](FPGA'S/CycloneIV.md/CycloneIV.md) (Propietario: Intel, en progreso por el momento)
+> - [*Color Ligth*](FPGA'S/ColorLigth/ColorLigth.md) (Software Libre, en progreso)
 
 Hecho por: Cesar Rodriguez - Estudiante de Ingeniería Electrónica de la Universidad Nacional de Colombia.
 
@@ -28,7 +29,7 @@ Aquí les dejo una guía para instalar tanto Linux o Windows en dado caso que ha
 
 ### 2. Entorno de Desarrollo (IDE)
 
-Para programar las FPGAs es como desarrollar código, por lo cual es recomendable tener una aplicación capaz de editar, compilar y ejecutar el código, aparte de usar la terminal. En mi recomendación el más útil es **Visual Studio Code** o en abreviación **VS Code**, un editor gratuito y bastante cómodo para usar y personalizar. Al inicio puede ser un poco abrumador pero con el tiempo se vuelve bastante útil.
+Para programar las FPGAs es como desarrollar código, por lo cual es recomendable tener una aplicación capaz de editar, compilar y ejecutar el código, aparte de usar la terminal. En mi recomendación el más útil es **Visual Studio Code** o en abreviación **VS Code**, un editor gratuito y bastante cómodo para usar y personalizar. Al inicio puede ser un poco abrumador pero con el tiempo se vuelve bastante útil. **Pagina oficial de Visual Studio Code: <https://code.visualstudio.com/>.**
 
 Tener en cuenta el sistema operativo que se usa e instalarlo:
 
@@ -40,8 +41,6 @@ Tener en cuenta el sistema operativo que se usa e instalarlo:
 
 > [*Instalación VS Code Windows*](https://code.visualstudio.com/docs/setup/windows)
 
-Página oficial para descargar Visual Studio Code: <https://code.visualstudio.com/download>
-
 Hay otros entornos de desarrollo, si ya usaban otro no se preocupen pueden usarlo siempre y cuando sepan cómo y les sea cómodo.
 
 ### 3. Lenguaje de Programación (HDL)
@@ -50,7 +49,7 @@ Para programar una FPGA se necesita de un lenguaje descriptivo de hardware conoc
 
 Ahora teniendo en cuenta que vamos a usar Verilog, necesitamos de un compilador que entienda las instrucciones que hace este lenguaje y las pase a un formato que la máquina, en este caso FPGA, pueda operar. También existen varios pero vamos a usar **Icarus Verilog** por las mismas razones anteriores.
 
-Por comodidad vamos a instalar todo desde la terminal, así evitamos depender de las versiones y dejar en la instalación automática de los archivos.
+Por comodidad vamos a instalar todo desde la terminal, así evitamos depender de las versiones y dejar en la instalación automática de los archivos. **Pagina oficial de Icarus Verilog: <https://steveicarus.github.io/iverilog/>.**
 
 #### Linux (Icarus Verilog)
 
@@ -84,11 +83,11 @@ Para revisar que se haya instalado correctamente, se puede ejecutar el siguiente
 iverilog -v
 ```
 
-Esto muestra la versión de Icarus Verilog instalada como: `Icarus Verilog version XX.X` (o similar). En dado caso que no funcione, está el repositorio donde se puede descargar manualmente: <https://sourceforge.net/projects/iverilog/>.
+Esto muestra la versión de Icarus Verilog instalada como: `Icarus Verilog version XX.X` (o similar). En dado caso que no funcione, está el repositorio donde se puede descargar manualmente: <https://github.com/steveicarus/iverilog/releases>.
 
 ### Entorno de Simulación (GTKWave)
 
-Al utilizar un HDL como Verilog, es importante tener una herramienta que permita ver cómo el código se comporta. GTKWave es una herramienta para visualizar esto, mediante pulsos de tiempo y señales. Con esto se comprende si el código funciona de la manera esperada. Esto se hace con el objetivo de al implementarlo en una FPGA, no haya errores que puedan causar que el dispositivo se dañe (generalmente no pasa pero por si acaso).
+Al utilizar un HDL como Verilog, es importante tener una herramienta que permita ver cómo el código se comporta. GTKWave es una herramienta para visualizar esto, mediante pulsos de tiempo y señales. Con esto se comprende si el código funciona de la manera esperada. Esto se hace con el objetivo de al implementarlo en una FPGA, no haya errores que puedan causar que el dispositivo se dañe (generalmente no pasa pero por si acaso). **Pagina oficial de GTKWave: <https://gtkwave.github.io/gtkwave/>.**
 
 #### Linux (GTKWave)
 
@@ -122,9 +121,9 @@ También podemos verificar si está instalado usando el comando para ver la vers
 gtkwave --version
 ```
 
-Aparece algo como `GTKWave Analyzer vX.X.XXXX (w)1999-20XX BSI`, en dado caso que no esté, descargarlo directamente de la página: <https://gtkwave.sourceforge.net/>.
+Aparece algo como `GTKWave Analyzer vX.X.XXXX (w)1999-20XX BSI`, en dado caso que no esté, descargarlo directamente de la página: <https://github.com/gtkwave/gtkwave/releases>.
 
-*las XXX son números que dependen de la versión instalada, no tienen que tener específicamente XXX, es solo un ejemplo.*
+*Nota: las XXX son números que dependen de la versión instalada, no tienen que tener específicamente XXX, es solo un ejemplo.*
 
 ### Selección de Hardware (FPGA)
 
@@ -133,5 +132,6 @@ Con esto ya estarían todas las herramientas básicas de trabajo, aún así esto
 Dependiendo del dispositivo, este va a pedir ciertas herramientas específicas no solo para la detección de este, sino del trabajo del dispositivo en sí. Aparte como cada uno de las FPGA'S tiene una empresa propietaria, estas se encargan de desarrollar un sistema capaz de compilar lo que deseen. Revisen qué tipo de dispositivo están usando y seleccionen la guía correspondiente.
 
 > - [*Digilent Zybo z7*](FPGA'S/Zybo%20Z7/Zyboz7.md) (Propietario: AMD)
+> - [*Altera Cyclone*](FPGA'S/CycloneIV.md/CycloneIV.md) (Propietario: Intel, en progreso)
 > - [*BlackIce MyStorm*](FPGA'S/BlackIce/BlackIce.md) (Software Libre)
-> - [*Altera Cyclone*](FPGA'S/CycloneIV.md/CycloneIV.md) (Propietario: Intel, en progreso por el momento)
+> - [*Color Ligth*](FPGA'S/ColorLigth/ColorLigth.md) (Software Libre, en progreso)
