@@ -5,7 +5,7 @@ Las FPGAs de código abierto son comúnmente usadas en **Linux**, así que esta 
 Links importantes de acceso rapido:
 
 - [Salidas Pmod](#pin-out)
-- [Creacion de Proyecto](#creacion-de-proyecto)
+- [Creacion de Proyecto](#creación-de-proyecto)
 - [Constrains](/FPGAS/My%20Storm%20Blackice/src/top.pcf)
 
 ## Pin Out
